@@ -132,12 +132,14 @@ var viewer3d;
 <p>1.使用ShareX錄製繪圖過程，搭配Zoomlt64可在錄製時按ctrl+1放大螢幕重點</p>
 <p>2.<span>使用hybrid利用C槽固態硬碟開啟可攜式NX</span></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Whlnysbc948" width="560"></iframe></p>
+<p>檔案下載:</p>
 <p></p>
 <p></p>
 <p>3D Model Viewer</p>
 <script src="/static/jsc3d.js" type="text/javascript"></script>
-<div id="models"><!-- 六个 canvas 元素来显示 3D 模型 --> <canvas height="300" id="cv1" style="border: 1px solid;" width="400"></canvas> <canvas height="300" id="cv2" style="border: 1px solid;" width="400"></canvas> <canvas height="300" id="cv3" style="border: 1px solid;" width="400"></canvas> <canvas height="300" id="cv4" style="border: 1px solid;" width="400"></canvas></div>
-<div style="width: 400px; height: 70px; border: 1px solid;">Model Color: <input id="mdlClr" onchange="changeOption('ModelColor',this.value)" style="margin-right: 50px;" type="color" value="#00ff40"/> Back Color1: <input id="bckClr1" onchange="changeOption('BackgroundColor1',this.value)" style="margin-right: 50px;" type="color"/> Back Color2: <input id="bckClr2" onchange="changeOption('BackgroundColor2',this.value)" type="color"/><br/> Render Mode:<select id="render" onchange="changeOption('RenderMode',this.value)">
+<div id="models"><!-- 六个 canvas 元素来显示 3D 模型 --></div>
+<div></div>
+<div><canvas height="300" id="cv1" style="border: 1px solid;" width="400"></canvas> <canvas height="300" id="cv2" style="border: 1px solid;" width="400"></canvas> <canvas height="300" id="cv3" style="border: 1px solid;" width="400"></canvas> <canvas div="" height="300" id="cv4" style="width: 400px; height: 70px; border: 1px solid;">Model Color: <input id="mdlClr" onchange="changeOption('ModelColor',this.value)" style="margin-right: 50px;" type="color" value="#00ff40"/> Back Color1: <input id="bckClr1" onchange="changeOption('BackgroundColor1',this.value)" style="margin-right: 50px;" type="color"/> Back Color2: <input id="bckClr2" onchange="changeOption('BackgroundColor2',this.value)" type="color"/><br/> Render Mode:<select id="render" onchange="changeOption('RenderMode',this.value)">
 <option>Flat</option>
 <option>Point</option>
 <option>Wireframe</option>
@@ -146,7 +148,7 @@ var viewer3d;
 <option>Standard</option>
 <option>low</option>
 <option>high</option>
-</select></div>
+</select></canvas></div>
 <script type="text/javascript">
 var viewers = [];
 
@@ -187,7 +189,6 @@ function changeOption(strOpt,strValue){
 
 function openByGet(){
     var urls = [
-        "https://s104.cycu.org/~pj2023/cad2024_part_ex1_solvespace.stl",
         "https://s104.cycu.org/~41223134/41223134_part1.0.stl",
         "https://s104.cycu.org/~41223134/41223134_part2.stl", // 第三个 STL 文件
         "https://s104.cycu.org/~41223134/41223134_part3.stl", // 第四个 STL 文件
